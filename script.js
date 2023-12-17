@@ -9,11 +9,7 @@ let threadid = '';
 let runid = '';
 
 let userMessage = null; // Variable to store user's message
-<<<<<<< HEAD
 const API_KEY = getCookie("API_KEY");
-=======
-const API_KEY = "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";
->>>>>>> 7703e6431ee0d2071c204c25e63442c92d4b9a2c
 const inputInitHeight = chatInput.scrollHeight;
 const headersObject = {
     "Content-Type": "application/json",
