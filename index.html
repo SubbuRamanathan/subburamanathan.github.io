@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="./favicon_altudo.ico">
+    <title>AI-Powered Website Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts Link For Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
+    <script src="script.js" defer></script>
+</head>
+<body class="show-chatbot">
+    <section id="welcome-container" class="w-full h-screen flex flex-col items-center justify-center bg-white dark:bg-black">
+        <div class="text-center">
+            <h1 class="text-4xl font-bold mb-4 text-black dark:text-white">Welcome!</h1>
+            <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 typewriter">
+                Try our new AI-powered website experience to achieve your visit goals in just a few seconds...
+            </p>
+            <button id="getStarted" class="inline-flex items-center justify-center rounded-md font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 text-lg bg-[#FFC906]">
+                Get Started
+            </button>
+        </div>
+    </section>
+    <iframe style="display:none;"></iframe>
+    <button class="chatbot-toggler">
+        <span class="material-symbols-rounded">mode_comment</span>
+        <span class="close-btn material-symbols-outlined">close</span>
+    </button>
+    <div id="chatbot-container" class="chatbot main" style="display:none">
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <img src=".\altudo_logo.png" />
+                <p>Hi there 👋<br>What brings you here today?</p>
+            </li>
+            <ul class="suggestion">
+                <li class="chat outgoing">
+                    <p>I would like to learn more about a specific service that you may offer</p>
+                </li>
+                <li class="chat outgoing">
+                    <p>I'm keen to explore the jobs Altudo can offer for my role to shape my career</p>
+                </li>
+                <li class="chat outgoing">
+                    <p>I'm eager to partner with Altudo to enhance and shape the digital experience for customers</p>
+                </li>
+            </ul>
+        </ul>
+        <div class="chat-input">
+            <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+            <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+    </div>
+</body>
+</html>
