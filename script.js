@@ -9,7 +9,7 @@ let threadid = '';
 let runid = '';
 
 let userMessage = null; // Variable to store user's message
-const API_KEY = "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";
+const API_KEY = getCookie("API_KEY");
 const inputInitHeight = chatInput.scrollHeight;
 const headersObject = {
     "Content-Type": "application/json",
@@ -197,6 +197,23 @@ getStartedBtn.addEventListener("click", () => {
     document.getElementById("welcome-container").remove();
     document.getElementById("chatbot-container").style.display = 'block';
 });
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
 if (threadid == '') {
     createThread();
 }
