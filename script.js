@@ -134,7 +134,7 @@ const paintPage = (html) => {
     var parser = new DOMParser();
     const personalizedHTMLDocument = parser.parseFromString(html, 'text/html');
     document.getElementsByTagName('title')[0].innerHTML = personalizedHTMLDocument.getElementsByTagName('title')[0].innerHTML;
-    var iframeHTML = personalizedHTMLDocument.documentElement.innerHTML.replace(/<body>(.[^<]*)</g, '<body><');
+    var iframeHTML = personalizedHTMLDocument.documentElement.innerHTML.replace(/<body(.*)>(.[^<]*)</g,'<body$1><');
 
     var iframe = document.getElementsByTagName('iframe')[0];
     var iframeWindow = iframe.contentWindow || (iframe.contentDocument.document || iframe.contentDocument);
